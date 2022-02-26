@@ -1,0 +1,116 @@
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/contact.css' %}" rel="stylesheet" type="text/css">
+	<link href="{% static 'css/base1.css' %}" rel="stylesheet" type="text/css">
+
+	<title>Portfolio</title>
+</head>
+<body>
+	<!-- Header -->
+	<header class="main-header">
+		<div class="container">
+			<div class="main-header__brand">
+				<a href="{% url 'home' %}">
+					<img src="{% static '/img/logo.png' %}" alt="logo">
+				</a>
+			</div>
+			<nav class="main-navigation">
+				<ul class="main-navigation__items">
+					<li class="main-navigation__item active">
+						<a href="{% url 'home' %}">Asosiy</a>
+					</li>
+					<li class="main-navigation__item">
+						<a href="#about-me">Men haqimda</a>
+					</li>
+					<li class="main-navigation__item">
+						<a href="#services">Xizmatlar</a>
+					</li>
+					<li class="main-navigation__item">
+						<a href="#clients">Mijozlar</a>
+					</li>
+					<li class="main-navigation__item">
+						<a href="#portfolio">Portfolio</a>
+					</li>
+					<li class="main-navigation__item">
+						<a href="#blog">Blog</a>
+					</li>
+					<li class="main-navigation__item">
+						<a href="#partners">Sheriklar</a>
+					</li>
+					<li class="main-navigation__item">
+						<a href="{% url 'contact' %}">Bog'lanish</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+	<!-- /Header section -->
+	{% block body %}
+	{% endblock %}
+
+	{% block contact %}
+	{% endblock %}
+
+	<!-- Footer -->
+	<footer class="footer">
+
+		<div class="container">
+			<div class="footer__brend">
+				<img src="{% static 'img/logo.png' %}" alt="Logo">
+			</div>
+			<nav class="footer__navigation">
+				<ul class="footer__navigation-items">
+					<li class="footer__navigation-item">
+						<a href="#">Asosiy</a>
+					</li>
+					<li class="footer__navigation-item">
+						<a href="#">Men haqimda</a>
+					</li>
+					<li class="footer__navigation-item">
+						<a href="#">Xizmatlar</a>
+					</li>
+					<li class="footer__navigation-item">
+						<a href="#">Mijozlar</a>
+					</li>
+					<li class="footer__navigation-item">
+						<a href="#">Portfolio</a>
+					</li>
+					<li class="footer__navigation-item">
+						<a href="#">Blog</a>
+					</li>
+					<li class="footer__navigation-item">
+						<a href="#">Sheriklar</a>
+					</li>
+
+				</ul>
+			</nav>
+			<ul class="footer__socials">
+				<li class="footer__social">
+					<a href="#" >
+						<i class="fab fa-telegram"></i>
+					</a>
+				</li>
+				<li class="footer__social">
+					<a href="#" >
+						<i class="fab fa-instagram"></i>
+					</a>
+				</li>
+				<li class="footer__social">
+					<a href="#" >
+						<i class="fab fa-youtube"></i>
+					</a>
+				</li>
+			</ul>
+			<p class="footer__text">
+				Copyright o2021 All rights reserved | This template is made with by Colorlib
+			</p>
+		</div>
+	</footer>
+	<!-- /Footer -->
+
+</body>
+</html>

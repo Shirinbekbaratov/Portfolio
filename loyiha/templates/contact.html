@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block contact %}
+    <div class="container">
+		<section class="contact">
+			<div class="section-title">
+				Men bilan bog'laning
+			</div>
+			<form action="" method="POST">{% csrf_token %}
+				<textarea rows="10" placeholder="Xabaringizni qoldiring" name="message"></textarea>
+				<div class="contact__firstname half-row">
+					<input type="text" placeholder="Ismingizni kiriting" name="firstname">
+				</div>
+				<div class="contact__email half-row">
+					<input type="email" placeholder="Emailingizni kiriting" name="email">
+				</div>
+				<button class="button contact__send" type="submit">Xabar jo'natish</button>
+			</form>
+		</section>
+	</div>
+{% endblock %}
